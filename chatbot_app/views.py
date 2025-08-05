@@ -14,9 +14,9 @@ if not os.path.exists(SERVICE_ACCOUNT_FILE):
 
 credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
 
-DIALOGFLOW_PROJECT_ID = "ai-chatbot-fcym"  # Replace with your Dialogflow project ID
+DIALOGFLOW_PROJECT_ID = ""  # Replace with your Dialogflow project ID
 DIALOGFLOW_LANGUAGE_CODE = "en"
-SESSION_ID = "user-session-12345"
+SESSION_ID = ""
 
 def home(request):
     """Simple home page response"""
@@ -48,3 +48,4 @@ def chatbot_response(request):
 
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+
